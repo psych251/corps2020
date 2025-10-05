@@ -1,6 +1,6 @@
 ---
-title: "Replication of Study X by Sample & Sample (20xx, Psychological Science)"
-author: "Replication Author[s] (contact information)"
+title: "Replication of Study 1 by Corps & Rabagliati (2020, Journal of Memory and Language)"
+author: "Xirong Hu (xirohu@stanford.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
   html:
@@ -12,7 +12,19 @@ format:
 
 ## Introduction
 
-[No abstract is needed.]  Each replication project will have a straightforward, no frills report of the study and results.  These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of data collection.  Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for replication, and any other essential information.  It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
+### Justification
+In what form predictions occur remains an unsolved problem in the field of speech comprehension. Corps and Rabagliati (2020) revealed that predictions about semantic content, instead of word forms, facilitated the perception of distorted speech in Experiment 1. This closely aligns with my research interest in how top-down information facilitates speech comprehension in challenging scenarios. Another reason for choosing this study is that the context manipulation used in Experiment 1 is relatively new and was proposed to better separate word-form prediction from semantic content prediction. Thus, it is worthwhile to replicate these findings. In addition to these theoretical motivations, there are two practical considerations. First, the original study was conducted on Prolific Academic, which makes the project more feasible. Second, the procedure was relatively well-documented in the paper, with stimulus list and analysis scripts shared on OSF, which makes it easier to adhere to the original procedure and analysis as closely as possible.
+
+### Stimuli and Procedures
+The stimuli consist of 30 auditorially presented questions and 30 distorted answers. For the procedure, I will strictly follow that described in the original paper (Experiment1/Method/Procedure).
+
+I anticipate two main challenges. The first concerns the stimuli. The authors have not made the stimuli publicly available. Moreover, the original study was conducted in the United Kingdom, where the low-level acoustic features are different. That might lead to perceptual differences after applying the noise-vocoding. This means I will need to record new auditory stimuli and apply the noise-vocoding. However, the script for that procedure was not shared. One solution is to reach out to the original authors. The second challenge concerns the programming of the experiment, since I have no experience with jsPsych.
+
+### Repo Link
+(If you open it from RPub, please right click the hyperlink. That should work!)
+[Repository](https://github.com/psych251/corps2020/tree/main)
+
+[Original Paper](https://github.com/psych251/corps2020/blob/main/original_paper/Corps%20and%20Rabagliati%20-%202020%20-%20How%20top-down%20processing%20enhances%20comprehension%20of%20noise-vocoded%20speech%20Predictions%20about%20meaning%20ar.pdf)
 
 
 ## Methods
