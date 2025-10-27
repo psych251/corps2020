@@ -34,35 +34,82 @@ I anticipate two main challenges. The first concerns the stimuli. The authors ha
 
 Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
 
-The paper's central research question is whether high-level knowledge enhances comprehension through:<br>
- - **Semantic predictions** measured by Answer Consistency effect
- - **Form predictions** measured by Question Constraint effect and its interaction with Answer Consistency.
+The paper's central research question is whether high-level knowledge enhances comprehension through:
+
+- **Semantic predictions** measured by Answer Consistency effect
+- **Form predictions** measured by Question Constraint effect and its interaction with Answer Consistency.
 
 Since the paper found Answer Consistency effect and null effect of the interaction between Question Constraint effect and Answer Constraint effect using generalized linear regression models, I will focus on the Answer Consistency effect for power analysis and sample size.
 
-Original effect size:
+**Original effect size:**
+
 - Answer Consistency: b = 4.29, SE = 0.42, p < .001
 - Original sample size: 80
 
 
+**Power Analysis Results:**
+
+- 80% power: 
+- 90% power:
+- 95% power: 
 
 ### Planned Sample
 
 Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.
 
+My planned sample size is 
+
 ### Materials
 
 All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+
+To ensure my replication closely align with the original study, I reached out to the first author for material and scripts. The author kindly shared all the stimuli. Since some questions asked about political leaders at that time and the answer no longer holds for now, I deleted those items, leaving 14 items per list whereas in the original stimuli there are 15 items per list. The items that I deleted are:
+
+- List_1a: (Question)Which female candidate recently ran for president of the United States? (Answer)Hillary Clinton
+- List_1b: (Question)What is the name of the British prime minister? (Answer)Theresa May
+- List_2a: (Question)Which female candidate recently ran for president of the United States? (Answer)The Northern Lights
+- List_2b: (Question)What is the name of the British prime minister? (Answer)New York
+- List_3a: (Question)Who did you see when you visited America? (Answer)Hillary Clinton
+- List_3b: (Question)Who did you see when you visited London? (Answer)Theresa May
+- List_4a: (Question)What did you buy from the shop? (Answer)Theresa May
+- List_4b: (Question)What is your least favorite method of transport? (Answer)Hillary Clinton
 
 ### Procedure	
 
 Can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
 
+"The experiment was administered online on Prolific Academic. Stimulus presentation was controlled using jsPsych (De Leeuw, 2015) and data was recorded using MySQL (version 5.7). Participants were warned that they would be listening to audio stimuli, and so were encouraged to complete the experiment in a quiet environment or to use headphones. Before the task, participants were instructed: “First you will hear a female speaker ask a question in a clear voice. You will then hear a male answer this question in a distorted voice. Your task is to listen carefully and type exactly what you think the male speaker said. If you do not know, then please guess”. To make stimulus onset salient, a fixation cross appeared 500 ms before question playback (see Fig. 1a). The fixation cross then turned red and answer playback began 500 ms later. After listening to the answer, participants were prompted to type their response and press a “submit answer” button."
+
+Due to implementation challenge, the data was recorded using AJAX call instead of mySQL. Everything else remains the same.
+
+The eight experiments corresponding to eight lists are listed below:
+
+- [Constraining questions with congruent answers - version a](https://web.stanford.edu/~xirohu/Experiment/List_1a_PP/index.html)
+- [Constraining questions with congruent answers - version b](https://web.stanford.edu/~xirohu/Experiment/List_1b_PP/index.html)
+- [Constraining questions with incongruent answers - version a](https://web.stanford.edu/~xirohu/Experiment/List_2a_PI/index.html)
+- [Constraining questions with incongruent answers -version b](https://web.stanford.edu/~xirohu/Experiment/List_2b_PI/index.html)
+- [Unconstraining questions with congruent answers -version a](https://web.stanford.edu/~xirohu/Experiment/List_3a_UP/index.html)
+- [Unconstraining questions with congruent answers -version b](https://web.stanford.edu/~xirohu/Experiment/List_3b_UP/index.html)
+- [Unconstraining questions with incongruent answers -version a](https://web.stanford.edu/~xirohu/Experiment/List_4a_UI/index.html)
+- [Unconstraining questions with incongruent answers -version b](https://web.stanford.edu/~xirohu/Experiment/List_4b_UI/index.html)
+
 ### Analysis Plan
 
-Can also quote directly, though it is less often spelled out effectively for an analysis strategy section.  The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.  
+Following Corps and Rabagliati (2020), I will conduct a signal detection analysis to assess participants' sensitivity to the words they actually heard, while controlling for response bias. Participants responses will be manually coded for the number of words matching the semantically consistent answer. I will follow these rules as specified by the original author:
+- correct obvious spelling mistakes
+- do not correct morphological mismatches
+- words reported in the wrong order will not be scored as matching
+- exclude trials where participants typed question rather than the answer
 
-**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do.
+After that, I will perform the exact mixed-effects logistic regression model as the original authors did.
+
+**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do. The model structure is as follows:
+```{r}
+cbind(ReportedExpectedWords, UnreportedExpectedWords) ~ 
+  Question_Constraint * Answer_Consistency * Block + 
+  (1 + Block || Participant) + 
+  (1 + Question_Constraint * Answer_Consistency * Block || Item)
+```
 
 ### Differences from Original Study
 
