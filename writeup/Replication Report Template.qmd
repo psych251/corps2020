@@ -22,9 +22,10 @@ I anticipate two main challenges. The first concerns the stimuli. The authors ha
 
 ### Repo Link
 (If you open it from RPub, please right click the hyperlink. That should work!)
-[Repository](https://github.com/psych251/corps2020/tree/main)
 
-[Original Paper](https://github.com/psych251/corps2020/blob/main/original_paper/Corps%20and%20Rabagliati%20-%202020%20-%20How%20top-down%20processing%20enhances%20comprehension%20of%20noise-vocoded%20speech%20Predictions%20about%20meaning%20ar.pdf)
+- [Repository](https://github.com/psych251/corps2020/tree/main)
+
+- [Original Paper](https://github.com/psych251/corps2020/blob/main/original_paper/Corps%20and%20Rabagliati%20-%202020%20-%20How%20top-down%20processing%20enhances%20comprehension%20of%20noise-vocoded%20speech%20Predictions%20about%20meaning%20ar.pdf)
 
 
 ## Methods
@@ -32,6 +33,18 @@ I anticipate two main challenges. The first concerns the stimuli. The authors ha
 ### Power Analysis
 
 Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
+
+The paper's central research question is whether high-level knowledge enhances comprehension through:<br>
+ - **Semantic predictions** measured by Answer Consistency effect
+ - **Form predictions** measured by Question Constraint effect and its interaction with Answer Consistency.
+
+Since the paper found Answer Consistency effect and null effect of the interaction between Question Constraint effect and Answer Constraint effect using generalized linear regression models, I will focus on the Answer Consistency effect for power analysis and sample size.
+
+Original effect size:
+- Answer Consistency: b = 4.29, SE = 0.42, p < .001
+- Original sample size: 80
+
+
 
 ### Planned Sample
 
