@@ -68,7 +68,7 @@ def extract_heard_answer(stimulus):
         return ''
     match = re.search(r'answers/(.+?)\.mp3', str(stimulus))
     if match:
-        return match.group(1).replace('.mp3', '')
+        return match.group(1)
     return ''
 
 def parse_list_file(filepath, stimulus_data):
@@ -77,7 +77,8 @@ def parse_list_file(filepath, stimulus_data):
     
     # Extract metadata from filename
     filename = os.path.basename(filepath)
-    list_match = re.search(r'List_(\w+)_PP', filename)
+    # Updated regex to match any two letter combination after List_*_
+    list_match = re.search(r'List_(\w+)_[A-Z]{2}', filename)
     list_name = list_match.group(1) if list_match else ''
     
     # Filter for survey-text rows (these contain participant responses)
@@ -94,11 +95,12 @@ def parse_list_file(filepath, stimulus_data):
     
     # Process each survey response
     for idx, row in survey_rows.iterrows():
-        # Skip the demographic survey (first survey-text entry)
         try:
             responses_dict = json.loads(row['responses'])
-            if 'Q0' in responses_dict and responses_dict.get('Q1') is None:
-                # This is likely a question response
+            
+            # Skip demographic survey (has Q1, Q2, Q3, Q4)
+            # Only process responses that have ONLY Q0 (the actual question responses)
+            if 'Q1' not in responses_dict and 'Q0' in responses_dict:
                 response_text = responses_dict['Q0']
                 
                 # Find the corresponding question audio (should be a few rows before)
@@ -158,7 +160,8 @@ def parse_list_file(filepath, stimulus_data):
                         }
                         
                         results.append(result)
-        except (json.JSONDecodeError, KeyError):
+        except (json.JSONDecodeError, KeyError) as e:
+            print(f"  Warning: Could not parse row {idx}: {e}")
             continue
     
     return pd.DataFrame(results)
@@ -202,9 +205,13 @@ def main():
         combined_df['Block'] = combined_df['Trial'].apply(
             lambda x: 1 if x <= 5 else (2 if x <= 10 else 3)
         )
+
+        # Ad-hoc amendation for naming error in the original stimulus
+        # Fixed version: use .replace() or .loc instead of if statement
+        combined_df['Heard Answer'] = combined_df['Heard Answer'].replace('North Pole', 'The North Pole')
         
         # sanity check
-        print(f"  Trial range after mutation: {combined_df['Trial'].min():.2f} - {combined_df['Trial'].max():.2f}")
+        print(f"  Trial range after mutation: {combined_df['Trial'].min():.0f} - {combined_df['Trial'].max():.0f}")
         print(f"  Block distribution:")
         print(f"    Block 1: {(combined_df['Block'] == 1).sum()} rows")
         print(f"    Block 2: {(combined_df['Block'] == 2).sum()} rows")
@@ -217,9 +224,6 @@ def main():
         
         # Reorder columns to match dprime.csv
         combined_df = combined_df[TARGET_COLUMNS]
-
-        # mutate
-
         
         # Save to output
         output_path = '/Users/xirohu/ResearchProj/corps2020/data/processed/transformed_dprime.csv'
