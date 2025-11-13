@@ -133,6 +133,21 @@ def extract_heard_answer(stimulus):
         return match.group(1)
     return ''
 
+def extract_trial_from_node_id(node_id):
+    """Extract the trial-relevant number from internal_node_id to handle multiple responses of demographic questions"""
+    if pd.isna(node_id):
+        return None
+    # get the second part of internal_node_id (00-7.0)
+    try:
+        parts = str(node_id).split('-')
+        if len(parts) >1 :
+            last_part = parts[-1]
+            number = int(last_part.split('.')[0])
+            return number
+    except (ValueError, IndexError):
+        return None
+    return None
+
 def parse_list_file(filepath, stimulus_data):
     """Parse a single List_*.csv file"""
     df = pd.read_csv(filepath)
@@ -149,7 +164,6 @@ def parse_list_file(filepath, stimulus_data):
     # Get participant ID and trial order from first row
     if len(df) > 0:
         participant_id = df['subject'].iloc[0]
-        trial_order_str = df['trial'].iloc[0]
     else:
         return pd.DataFrame()
     
@@ -164,6 +178,9 @@ def parse_list_file(filepath, stimulus_data):
             # Only process responses that have ONLY Q0 (the actual question responses)
             if 'Q1' not in responses_dict and 'Q0' in responses_dict:
                 response_text = responses_dict['Q0']
+
+                # extrac trial number from internal_node_id
+                trial_num = extract_trial_from_node_id(row.get('internal_node_id'))
                 
                 # Find the corresponding question audio (should be a few rows before)
                 question_audio_row = df[(df.index < idx) & 
@@ -195,7 +212,7 @@ def parse_list_file(filepath, stimulus_data):
                         result = {
                             'ItemNo': stim_info.get('ItemNo', ''),
                             'Participant': participant_id,
-                            'Trial': row['trial_index'],
+                            'Trial': trial_num,
                             'ACondition': stim_info.get('ACondition', ''),
                             'Plaus': stim_info.get('Aplaus', ''),
                             'Heard Answer': heard_answer,
