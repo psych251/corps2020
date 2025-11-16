@@ -1,71 +1,15 @@
 ItemNo,Participant,Trial,ACondition,Plaus,Heard Answer,HA Wlength,Anumber,List,QCondition,QFile,Qnumber,Question,Expected Answer,EA Wlength,QLSA,response,Correct,Incorrect,Prop Heard,Block,Plaus HIT,Plaus Incorrect,NumberOfPlausibleWordsReported,NumberOfPlausibleWordsNotReported,Prop Expected
-27,10673,1,Implausible,1.27,The Thames,2,25,4a,Unpredictable,19U,19,Who is your favourite fictional character?,Snow White,2,0.11,Jack Chen,0,2,0.00,1,0,2,0,2,0.00
-5,10673,2,Implausible,1.55,The Tube,2,26,4a,Unpredictable,15U,15,What are your parents called?,Molly and Arthur,3,0.21,Jane,0,2,0.00,1,0,3,0,3,0.00
-19,10673,3,Implausible,1.09,October thirty first,3,18,4a,Unpredictable,22U,22,Where are you going at Christmas?,The Eiffel Tower,3,0.51,jane,0,3,0.00,1,0,3,0,3,0.00
-25,10673,4,Implausible,1.27,Buzz Lightyear,2,6,4a,Unpredictable,17U,17,Where would you like to go shopping?,New York,2,0.24,the white scale,0,2,0.00,1,0,2,0,2,0.00
-1,10673,5,Implausible,1.64,December 25th,3,7,4a,Unpredictable,9U,9,What would you like for dinner?,Ham and Pineapple,3,0.31,some potatos,0,3,0.00,1,0,3,0,3,0.00
-4,10673,6,Implausible,1.36,Big Ben,2,3,4a,Unpredictable,30U,30,How often do you go outside for a walk?,Twice a day,3,0.54,one hour,0,2,0.00,2,0,3,0,3,0.00
-28,10673,7,Implausible,1.09,The Amazon River,3,21,4a,Unpredictable,8U,8,Who did you see interviewed on television recently?,Donald Trump,2,0.21,robinson river,1,2,0.33,2,0,2,0,2,0.00
-16,10673,8,Implausible,3.36,Kings Cross,2,14,4a,Unpredictable,13U,13,What is your favourite film?,James Bond,2,0.22,King's cross,2,0,1.00,2,0,2,0,2,0.00
-3,10673,9,Implausible,2.09,Andy Murray,2,2,4a,Unpredictable,12U,12,What happened to your boat?,It hit an iceberg,4,0.58,underline,0,2,0.00,2,0,4,0,4,0.00
-14,10673,10,Implausible,1.64,Ten Downing Street,3,20,4a,Unpredictable,31U,31,What is your best friend called?,Robin Hood,2,0.12,Saint Anna Trait,0,3,0.00,2,0,2,0,2,0.00
-21,10673,11,Implausible,1.64,New Years Eve,3,16,4a,Unpredictable,23U,23,Where would you like to go on holiday?,The Northe Pole,3,0.15,the craf,0,3,0.00,3,1,2,1,2,0.33
-26,10673,12,Implausible,2.18,The Northern Lights,3,24,4a,Unpredictable,11U,11,Who did you see when you visited America?,Hillary Clinton,2,0.37,Robert Knights,0,3,0.00,3,0,2,0,2,0.00
-7,10673,13,Implausible,1.27,Tom Hanks,2,29,4a,Unpredictable,4U,4,What colours should I paint the wall?,Black and white,3,0.41,turquoise,0,2,0.00,3,0,3,0,3,0.00
-12,10673,14,Implausible,4.91,The White House,3,27,4a,Unpredictable,10U,10,What is the name of your favourite book?,Harry Potter,2,0.35,the white house,3,0,1.00,3,0,2,0,2,0.00
-27,67428,1,Plausible,6.55,Snow White,2,19,3a,Unpredictable,19U,19,Who is your favourite fictional character?,Snow White,2,0.11,Shrek,0,2,0.00,1,0,2,0,2,0.00
-1,67428,2,Plausible,4.91,Ham and pineapple,3,9,3a,Unpredictable,9U,9,What would you like for dinner?,Ham and Pineapple,3,0.31,Oat meal?,0,3,0.00,1,0,3,0,3,0.00
-25,67428,3,Plausible,6.09,New York,2,17,3a,Unpredictable,17U,17,Where would you like to go shopping?,New York,2,0.24,Target,0,2,0.00,1,0,2,0,2,0.00
-5,67428,4,Plausible,7,Molly and Arthur,3,15,3a,Unpredictable,15U,15,What are your parents called?,Molly and Arthur,3,0.21,Rory and Dan,1,2,0.33,1,1,2,1,2,0.33
-7,67428,5,Plausible,6.55,Black and white,3,4,3a,Unpredictable,4U,4,What colours should I paint the wall?,Black and white,3,0.41,Black and white,3,0,1.00,1,3,0,3,0,1.00
-12,67428,6,Plausible,6.27,Harry Potter,2,10,3a,Unpredictable,10U,10,What is the name of your favourite book?,Harry Potter,2,0.35,Harry Potter,2,0,1.00,2,2,0,2,0,1.00
-8,67428,7,Plausible,6.27,A knife and fork,4,1,3a,Unpredictable,1U,1,What did you buy from the shop?,A knife and fork,4,0.32,Tablecloth,0,4,0.00,2,0,4,0,4,0.00
-3,67428,8,Plausible,6.09,It hit an iceberg,4,12,3a,Unpredictable,12U,12,What happened to your boat?,It hit an iceberg,4,0.58,it disappeared,1,3,0.25,2,1,3,1,3,0.25
-19,67428,9,Plausible,5.1,The Eiffel Tower,3,22,3a,Unpredictable,22U,22,Where are you going at Christmas?,The Eiffel Tower,3,0.51,Eiffel tower,2,1,0.67,2,2,1,2,1,0.67
-28,67428,10,Plausible,6.91,Donald Trump,2,8,3a,Unpredictable,8U,8,Who did you see interviewed on television recently?,Donald Trump,2,0.21,Joey King,0,2,0.00,2,0,2,0,2,0.00
-14,67428,11,Plausible,4.91,Robin hood,2,31,3a,Unpredictable,31U,31,What is your best friend called?,Robin Hood,2,0.12,Matthew Good?,0,2,0.00,3,0,2,0,2,0.00
-16,67428,12,Plausible,5.18,James bond,2,13,3a,Unpredictable,13U,13,What is your favourite film?,James Bond,2,0.22,James Bond,2,0,1.00,3,2,0,2,0,1.00
-21,67428,13,Plausible,5.82,The North Pole,3,23,3a,Unpredictable,23U,23,Where would you like to go on holiday?,The Northe Pole,3,0.15,,NA,#VALUE!,#VALUE!,3,NA,#VALUE!,NA,#VALUE!,#VALUE!
-4,67428,14,Plausible,6.64,Twice a day,3,30,3a,Unpredictable,30U,30,How often do you go outside for a walk?,Twice a day,3,0.54,twice a day,3,0,1.00,3,3,0,3,0,1.00
-3,78874,1,Plausible,6.64,It hit an iceberg,4,12,1a,Predictable,12P,12,How did The Titanic sink?,It hit an iceberg,4,0.72,iceberg crush,4,0,1.00,1,4,0,4,0,1.00
-4,78874,2,Plausible,6.27,Twice a day,3,30,1a,Predictable,30P,30,How often does the dentist tell you to brush your teeth?,Twice a day,3,0.82,twice a day,3,0,1.00,1,3,0,3,0,1.00
-16,78874,3,Plausible,7,James bond,2,13,1a,Predictable,13P,13,Which character starred in the famous 007 films?,James Bond,2,0.95,xxx paul?,0,2,0.00,1,0,2,0,2,0.00
-1,78874,4,Plausible,6.91,Ham and pineapple,3,9,1a,Predictable,9P,9,"As well as cheese and tomato, which two toppings are usually on a Hawaiian pizza?",Ham and Pineapple,3,0.89,mushroom?,0,3,0.00,1,0,3,0,3,0.00
-19,78874,5,Plausible,6.27,The Eiffel Tower,3,22,1a,Predictable,22P,22,Which tall building is in Paris?,The Eiffel Tower,3,0.82,eiffiel tower ,2,1,0.67,1,2,1,2,1,0.67
-8,78874,6,Plausible,6.46,A knife and fork,4,1,1a,Predictable,1P,1,Which cutlery should I use to cut my food?,A knife and fork,4,0.82,knife and folk,3,1,0.75,2,3,1,3,1,0.75
-7,78874,7,Plausible,6.91,Black and white,3,4,1a,Predictable,4P,4,What colours are pandas?,Black and white,3,0.98,black and white,3,0,1.00,2,3,0,3,0,1.00
-27,78874,8,Plausible,6.91,Snow White,2,19,1a,Predictable,19P,19,Which fictional character lived with seven dwarves?,Snow White,2,1,shirl white?,1,1,0.50,2,1,1,1,1,0.50
-25,78874,9,Plausible,7,New York,2,17,1a,Predictable,17P,17,Which city is the statue of liberty in?,New York,2,0.97,,NA,#VALUE!,#VALUE!,2,NA,#VALUE!,NA,#VALUE!,#VALUE!
-28,78874,10,Plausible,6.91,Donald Trump,2,8,1a,Predictable,8P,8,Who is the newly elected president of America?,Donald Trump,2,0.94,Trump,1,1,0.50,2,1,1,1,1,0.50
-5,78874,11,Plausible,6.27,Molly and Arthur,3,15,1a,Predictable,15P,15,What are the names of Ron Weasley's mum and dad?,Molly and Arthur,3,0.67,19 century ,0,3,0.00,3,0,3,0,3,0.00
-21,78874,12,Plausible,5.27,The North Pole,3,23,1a,Predictable,23P,23,Where does Father Christmas live?,The Northe Pole,3,0.81,lapland,0,3,0.00,3,0,3,0,3,0.00
-14,78874,13,Plausible,5.82,Robin hood,2,31,1a,Predictable,31P,31,Who leads a gang of outlaws in Sherwood Forest?,Robin Hood,2,1,Hollywood?,0,2,0.00,3,0,2,0,2,0.00
-12,78874,14,Plausible,6.82,Harry Potter,2,10,1a,Predictable,10P,10,Which young wizard defeated Lord Voldemort?,Harry Potter,2,0.98,Harry Porter,2,0,1.00,3,2,0,2,0,1.00
-25,23590,1,Plausible,7,New York,2,17,1a,Predictable,17P,17,Which city is the statue of liberty in?,New York,2,0.97,New York,2,0,1.00,1,2,0,2,0,1.00
-1,23590,2,Plausible,6.91,Ham and pineapple,3,9,1a,Predictable,9P,9,"As well as cheese and tomato, which two toppings are usually on a Hawaiian pizza?",Ham and Pineapple,3,0.89,ham and pineapple,3,0,1.00,1,3,0,3,0,1.00
-28,23590,3,Plausible,6.91,Donald Trump,2,8,1a,Predictable,8P,8,Who is the newly elected president of America?,Donald Trump,2,0.94,Donald Trump,2,0,1.00,1,2,0,2,0,1.00
-16,23590,4,Plausible,7,James bond,2,13,1a,Predictable,13P,13,Which character starred in the famous 007 films?,James Bond,2,0.95,James Bond,2,0,1.00,1,2,0,2,0,1.00
-21,23590,5,Plausible,5.27,The North Pole,3,23,1a,Predictable,23P,23,Where does Father Christmas live?,The Northe Pole,3,0.81,North Pole,2,1,0.67,1,2,1,2,1,0.67
-3,23590,6,Plausible,6.64,It hit an iceberg,4,12,1a,Predictable,12P,12,How did The Titanic sink?,It hit an iceberg,4,0.72,It hit an iceberg,4,0,1.00,2,4,0,4,0,1.00
-5,23590,7,Plausible,6.27,Molly and Arthur,3,15,1a,Predictable,15P,15,What are the names of Ron Weasley's mum and dad?,Molly and Arthur,3,0.67,Lorie and Hafa,1,2,0.33,2,1,2,1,2,0.33
-19,23590,8,Plausible,6.27,The Eiffel Tower,3,22,1a,Predictable,22P,22,Which tall building is in Paris?,The Eiffel Tower,3,0.82,Eiffel tower,2,1,0.67,2,2,1,2,1,0.67
-27,23590,9,Plausible,6.91,Snow White,2,19,1a,Predictable,19P,19,Which fictional character lived with seven dwarves?,Snow White,2,1,Snow white,2,0,1.00,2,2,0,2,0,1.00
-7,23590,10,Plausible,6.91,Black and white,3,4,1a,Predictable,4P,4,What colours are pandas?,Black and white,3,0.98,black and white,3,0,1.00,2,3,0,3,0,1.00
-12,23590,11,Plausible,6.82,Harry Potter,2,10,1a,Predictable,10P,10,Which young wizard defeated Lord Voldemort?,Harry Potter,2,0.98,Harry Potter,2,0,1.00,3,2,0,2,0,1.00
-14,23590,12,Plausible,5.82,Robin hood,2,31,1a,Predictable,31P,31,Who leads a gang of outlaws in Sherwood Forest?,Robin Hood,2,1,Robin Hood,2,0,1.00,3,2,0,2,0,1.00
-4,23590,13,Plausible,6.27,Twice a day,3,30,1a,Predictable,30P,30,How often does the dentist tell you to brush your teeth?,Twice a day,3,0.82,twice a day,3,0,1.00,3,3,0,3,0,1.00
-8,23590,14,Plausible,6.46,A knife and fork,4,1,1a,Predictable,1P,1,Which cutlery should I use to cut my food?,A knife and fork,4,0.82,knife and fork,3,1,0.75,3,3,1,3,1,0.75
-9,32124,1,Plausible,6.91,The Tube,2,26,1b,Predictable,26P,26,What is London's underground railway also known as?,The Tube,2,0.71,the tube,2,0,1.00,1,2,0,2,0,1.00
-18,32124,2,Plausible,7,October thirty first,3,18,1b,Predictable,18P,18,When do you celebrate Halloween?,October thirty first,3,0.89,October 31st,3,0,1.00,1,3,0,3,0,1.00
-17,32124,3,Plausible,6.55,December 25th,3,7,1b,Predictable,7P,7,When do you celebrate Christmas?,December twenty fifth,3,0.9,December 25th,3,0,1.00,1,3,0,3,0,1.00
-2,32124,4,Plausible,5.91,Kings Cross,2,14,1b,Predictable,14P,14,At which train station will you find platform nine and three quarters?,Kings Cross,2,0.74,King's Cross,2,0,1.00,1,2,0,2,0,1.00
-20,32124,5,Plausible,6.91,The Thames,2,25,1b,Predictable,25P,25,Which river runs through London?,The Thames,2,0.69,the Times,1,1,0.50,1,1,1,1,1,0.50
-13,32124,6,Plausible,7,New Years Eve,3,16,1b,Predictable,16P,16,What is the thirty first of December?,New Years Eve,3,0.8,the New Year's Eve,3,0,1.00,2,3,0,3,0,1.00
-23,32124,7,Plausible,6.82,Ten Downing Street,3,20,1b,Predictable,20P,20,Where does the prime minister live?,Ten Downing Street,3,0.8,Tong Daning's Street,3,0,1.00,2,3,0,3,0,1.00
-15,32124,8,Plausible,6.64,Big Ben,2,3,1b,Predictable,3P,3,Which famous clock is in London?,Big Ben,2,1,Big Ben,2,0,1.00,2,2,0,2,0,1.00
-10,32124,9,Plausible,5.64,The Amazon River,3,21,1b,Predictable,21P,21,What is the longest river in the world?,The Amazon river,3,0.63,Amazon River,2,1,0.67,2,2,1,2,1,0.67
-22,32124,10,Plausible,6.73,The White House,3,27,1b,Predictable,27P,27,Where does the president of America live?,The White House,3,0.84,the White House,3,0,1.00,2,3,0,3,0,1.00
-9,32124,11,Plausible,6.91,Buzz Lightyear,2,26,1b,Predictable,6P,26,What is London's underground railway also known as?,Buzz Lightyear,2,0.71,the white field,0,2,0.00,3,0,2,0,2,0.00
-6,32124,12,Plausible,5.64,The Northern Lights,3,24,1b,Predictable,24P,24,What is Aurora Borealis commonly known as?,The Northern Lights,3,0.85,I don't know,NA,#VALUE!,#VALUE!,3,NA,#VALUE!,NA,#VALUE!,#VALUE!
-20,32124,13,Plausible,6.91,Buckingham Palace,2,25,1b,Predictable,5P,25,Which river runs through London?,Buckingham Palace,2,0.69,I don't know,NA,#VALUE!,#VALUE!,3,NA,#VALUE!,NA,#VALUE!,#VALUE!
-29,32124,14,Plausible,6.55,Andy Murray,2,2,1b,Predictable,2P,2,Who is the best Scottish tennis player?,Andy Murray,2,0.89,I don't know,NA,#VALUE!,#VALUE!,3,NA,#VALUE!,NA,#VALUE!,#VALUE!
+12,45485,1,Plausible,6.82,Harry Potter,2,10,1a,Predictable,10P,10,Which young wizard defeated Lord Voldemort?,Harry Potter,2,0.98,,,,,1,,,,,
+16,45485,2,Plausible,7.0,James bond,2,13,1a,Predictable,13P,13,Which character starred in the famous 007 films?,James Bond,2,0.95,,,,,1,,,,,
+28,45485,3,Plausible,6.91,Donald Trump,2,8,1a,Predictable,8P,8,Who is the newly elected president of America?,Donald Trump,2,0.94,,,,,1,,,,,
+5,45485,4,Plausible,6.27,Molly and Arthur,3,15,1a,Predictable,15P,15,What are the names of Ron Weasley's mum and dad?,Molly and Arthur,3,0.67,,,,,1,,,,,
+1,45485,5,Plausible,6.91,Ham and pineapple,3,9,1a,Predictable,9P,9,"As well as cheese and tomato, which two toppings are usually on a Hawaiian pizza?",Ham and Pineapple,3,0.89,,,,,1,,,,,
+7,45485,6,Plausible,6.91,Black and white,3,4,1a,Predictable,4P,4,What colours are pandas?,Black and white,3,0.98,,,,,2,,,,,
+14,45485,7,Plausible,5.82,Robin hood,2,31,1a,Predictable,31P,31,Who leads a gang of outlaws in Sherwood Forest?,Robin Hood,2,1.0,,,,,2,,,,,
+21,45485,8,Plausible,5.27,The North Pole,3,23,1a,Predictable,23P,23,Where does Father Christmas live?,The Northe Pole,3,0.81,,,,,2,,,,,
+19,45485,9,Plausible,6.27,The Eiffel Tower,3,22,1a,Predictable,22P,22,Which tall building is in Paris?,The Eiffel Tower,3,0.82,,,,,2,,,,,
+4,45485,10,Plausible,6.27,Twice a day,3,30,1a,Predictable,30P,30,How often does the dentist tell you to brush your teeth?,Twice a day,3,0.82,,,,,2,,,,,
+25,45485,11,Plausible,7.0,New York,2,17,1a,Predictable,17P,17,Which city is the statue of liberty in?,New York,2,0.97,,,,,3,,,,,
+8,45485,12,Plausible,6.46,A knife and fork,4,1,1a,Predictable,1P,1,Which cutlery should I use to cut my food?,A knife and fork,4,0.82,,,,,3,,,,,
+27,45485,13,Plausible,6.91,Snow White,2,19,1a,Predictable,19P,19,Which fictional character lived with seven dwarves?,Snow White,2,1.0,,,,,3,,,,,
+3,45485,14,Plausible,6.64,It hit an iceberg,4,12,1a,Predictable,12P,12,How did The Titanic sink?,It hit an iceberg,4,0.72,,,,,3,,,,,

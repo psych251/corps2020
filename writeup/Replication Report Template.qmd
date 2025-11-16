@@ -46,6 +46,7 @@ Since the paper found Answer Consistency effect and null effect of the interacti
 - Answer Consistency: b = 4.29, SE = 0.42, p < .001
 - Original sample size: 80
 
+I used powersim to simulate the distribution. It is still running as it is quite computationally heavy. I will update that once I have the result. The script can be found in github repository ./data/scripts/power_analysis.r
 
 **Power Analysis Results:**
 
@@ -146,7 +147,9 @@ Data preparation following the analysis plan.
 ```
 
 ### Confirmatory analysis
+I have converted the stored data into the structure that aligns with the data structure in the original paper (see https://osf.io/kwa32) using [python script](https://github.com/psych251/corps2020/blob/main/data/scripts/data_preparation.py). The converted file can be found [here](https://github.com/psych251/corps2020/blob/main/data/processed/transformed_dprime.csv). 
 
+Once finishing manually coding, I will use the [same script](https://osf.io/5cqy9) provided by the author for mixed-effects regression model. 
 The analyses as specified in the analysis plan.  
 
 *Side-by-side graph with original graph is ideal here*

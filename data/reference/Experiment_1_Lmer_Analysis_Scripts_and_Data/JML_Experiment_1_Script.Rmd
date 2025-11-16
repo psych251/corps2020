@@ -1,0 +1,121 @@
+---
+title: 'Experiment 1: Perceptual Enhancement'
+author: "Ruth Corps"
+date: "14/03/2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+data <- read.csv("online data.csv")
+data$Participant <- as.factor(data$Participant)
+data$ItemNo <- as.factor(data$ItemNo)
+levels(data$ACondition) <- c("Semantically Inconsistent", "Semantically Consistent")
+levels(data$QCondition) <- c("Form Constraining", "Form Unconstraining")
+
+se = function(x){
+  sd(x)/sqrt(length(x))
+}
+
+library(doBy)
+library(ggplot2)
+library(lme4)
+library(car)
+library(gridExtra)
+```
+
+Accuracy analysis
+# Condition means broken down by block
+```{r means, include=TRUE, echo=FALSE}
+
+data$BlockF <- as.factor(data$Block)
+bypart <- summaryBy(Prop~Participant+BlockF+QCondition+ACondition, data=data, keep.names=T, na.rm=T, FUN=c(mean))
+sum <- summaryBy(Prop~BlockF+QCondition+ACondition, data=bypart, FUN=c(mean, se), keep.names=T)
+
+accmeans <- ggplot(sum2, aes(x=BlockF, y=Prop.mean, group=ACondition, linetype=ACondition)) + 
+  geom_line()+geom_point()+facet_grid(~QCondition) + geom_errorbar(aes(ymin=Prop.mean-Prop.se, ymax=Prop.mean+Prop.se), width=.08) +
+  xlab("Block") + ylab("Average Proportion of Words \n in Heard Answer Reported Correctly") + labs(fill="Answer Consistency") +
+  scale_fill_grey()+theme_bw()+labs(linetype='Answer Consistency')+ theme(axis.text.x=element_text(size=28)) + theme(axis.text.y=element_text(size=28)) +
+  theme(axis.title.y=element_text(size=32, colour="black")) + theme(axis.title.x=element_text(size=32, colour="black")) + theme(legend.position="bottom", legend.margin=margin(t = 0.5, unit='cm'), text=element_text(colour="black", size=38)) + ylim(0, 1) + scale_linetype_manual(values=c("solid", "dashed"))+ theme(plot.margin=unit(c(1,1,0.5,1), "cm")) + theme(axis.title.x=element_text(margin=unit(c(5, 0, 0, 0), "mm"))) + theme(axis.title.y=element_text(margin=unit(c(0, 5, 0, 0), "mm")))
+
+
+```
+
+# Analyse accuracy
+```{r accanalysissetup, include=FALSE, echo=FALSE}
+
+data$QLSAS <- scale(data$QLSA, T, T)
+data$PL <- scale(data$Plaus, T, T)
+data$BlockS <- scale(data$Block, T, T)
+
+```
+
+```{r accanalysis, include=TRUE, echo=FALSE}
+
+m1 <- glmer(formula = cbind(data$Correct,data$Incorrect) ~ QLSAS*PL*BlockS+(1+BlockS||Participant)+(1+QLSAS*PL*BlockS||ItemNo), weights=Wlength, data=data, family="binomial", control=glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=2e5)))
+summary(m1)
+
+# plot interaction
+tiff(file = "temp.tiff", width = 6000, height = 3200, units = "px", res = 800)
+par(cex.lab = 1.7, cex.axis=1.7)
+coplot(Prop~QLSA|Plaus, data=data, rows=1, panel=panel.car, lowess.line=FALSE, xlab=c("Question LSA", "Answer Plausibility Rating"), ylab=c("Proportion"))
+
+```
+
+Signal detection analysis
+```{r stdsetup, include=FALSE, echo=FALSE}
+
+d <- read.csv("dprime.csv")
+levels(d$ACondition) <- c("Semantically Inconsistent", "Semantically Consistent")
+levels(d$QCondition) <- c("Form Constraining", "Form Unconstraining")
+d$BlockF <- as.factor(d$Block)
+
+```
+
+# Condition means broken down by block
+```{r stdmeans, include=TRUE, echo=FALSE}
+
+bypartd <- summaryBy(Prop.Expected~Participant+BlockF+QCondition+ACondition, data=d, keep.names=T, na.rm=T, FUN=c(mean))
+sumd <- summaryBy(Prop.Expected~BlockF+QCondition+ACondition, data=bypartd, FUN=c(mean, se), keep.names=T)
+
+dprimemeans <- ggplot(sumd, aes(x=BlockF, y=Prop.Expected.mean, group=ACondition, linetype=ACondition)) + 
+  geom_line()+geom_point()+facet_grid(~QCondition) + geom_errorbar( aes(ymin=Prop.Expected.mean-Prop.Expected.se, ymax=Prop.Expected.mean+Prop.Expected.se), width=.08) +
+  xlab("Block") + ylab("Average Proportion of Words \n in Expected Answer Reported Correctly") + labs(fill="Answer Consistency") +
+  scale_fill_grey()+theme_bw()+labs(linetype='Answer Consistency')+ theme(axis.text.x=element_text(size=28)) + theme(axis.text.y=element_text(size=28)) +
+  theme(axis.title.y=element_text(size=32, colour="black")) + theme(axis.title.x=element_text(size=32, colour="black")) + theme(legend.position="bottom", legend.margin=margin(t = 0.5, unit='cm'), text=element_text(colour="black", size=38)) + scale_linetype_manual(values=c("solid", "dashed"))+ theme(plot.margin=unit(c(1,1,0.5,1), "cm")) + theme(axis.title.x=element_text(margin=unit(c(5, 0, 0, 0), "mm"))) + theme(axis.title.y=element_text(margin=unit(c(0, 5, 0, 0), "mm")))
+
+# arrange plots with just one legend
+p3 <- grid.arrange(arrangeGrob(accmeans + theme(legend.position="none"),
+                               dprimemeans + theme(legend.position="none"),
+                               nrow=1),
+                   mylegend, nrow=2,heights=c(12, 1))
+
+
+ggsave("plot.png", plot=p3, width=25, height=12, dpi=500)
+
+```
+
+# Run std analysis
+```{r stdanalysissetup, include=FALSE, echo=FALSE}
+
+d$QLSAS <- scale(d$QLSA, T, T)
+d$PL <- scale(d$Plaus, T, T)
+d$BlockS <- scale(d$Block, T, T)
+
+```
+
+```{r stdanalysis, include=TRUE, echo=FALSE}
+
+m2 <- glmer(formula = cbind(d$Plaus.HIT, d$Plaus.Incorrect) ~
+              QLSAS*PL*BlockS+(1+BlockS||Participant)+(1+QLSAS*PL*BlockS||ItemNo), data=d, family="binomial", control=glmerControl(optimizer="bobyqa", optCtrl=list(maxfun=2e5))) 
+summary(m2)
+
+```
+
+
+
+
+
+
+
