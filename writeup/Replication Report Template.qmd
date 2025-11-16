@@ -36,29 +36,28 @@ Original effect size, power analysis for samples to achieve 80%, 90%, 95% power 
 
 The paper's central research question is whether high-level knowledge enhances comprehension through:
 
-- **Semantic predictions** measured by Answer Consistency effect
+- **Semantic predictions** measured by null interaction between Question Constrain and Answer Consistency.
 - **Form predictions** measured by Question Constraint effect and its interaction with Answer Consistency.
 
-Since the paper found Answer Consistency effect and null effect of the interaction between Question Constraint effect and Answer Constraint effect using generalized linear regression models, I will focus on the Answer Consistency effect for power analysis and sample size.
+The key observation that favors the Semantic prediction instead of form prediction is the absence of interaction. 
 
 **Original effect size:**
 
-- Answer Consistency: b = 4.29, SE = 0.42, p < .001
+- Answer Consistency * Questions Constraint: b = -0.18, SE = 0.30, p = 0.55, BayesFactor = 0.19
 - Original sample size: 80
 
-I used powersim to simulate the distribution. It is still running as it is quite computationally heavy. I will update that once I have the result. The script can be found in github repository ./data/scripts/power_analysis.r
+Considering how computationally heavy it is to simulate the power by a complex Bayesian modeling, I chose a simple way to approximate the power, which specified as follows. I simplified the original model to a simple two-way ANOVA (Prop.Expected ~ ACondition * QCondition), and calculated the effect size (cohen's f2). Then I used the BayesPower package to calculate the expected sample size to achieve 80% and 90% power. The script can be found in the [repository](https://github.com/psych251/corps2020/blob/main/data/scripts/power_analysis_simple.r)
 
 **Power Analysis Results:**
 
-- 80% power: 
-- 90% power:
-- 95% power: 
+- 80% power: 104 participants
+- 90% power: 324 participants
 
 ### Planned Sample
 
 Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.
 
-My planned sample size is 
+My planned sample size is 80. I chose to stay with the original sample size due to budget concern. Although it does not meet 80% power, the lowest cohen's f2 I can choose in BayesPower package is 0.01, whereas my calculated Cohen's f2 is 0.0015. This suggested that the actual needed participants to achieve 80% power might be smaller than 104. A follow-up simulation analysis could test this although it exceeds my capacity.
 
 ### Materials
 
