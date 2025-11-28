@@ -1,0 +1,114 @@
+ItemNo,Participant,Trial,ACondition,Plaus,Heard Answer,HA Wlength,Anumber,List,QCondition,QFile,Qnumber,Question,Expected Answer,EA Wlength,QLSA,response,Correct,Incorrect,Prop Heard,Block,Plaus HIT,Plaus Incorrect,NumberOfPlausibleWordsReported,NumberOfPlausibleWordsNotReported,Prop Expected
+9,99079,1,Implausible,1.18,The Eiffel Tower,2,11,4b,Unpredictable,6U,26,What is your least favourite method of transport?,Buzz Lightyear,2,0.39,,0,2,0,1,,,0,2,0
+6,99079,2,Implausible,2.64,Ham and pineapple,3,9,4b,Unpredictable,24U,24,What can you see out of your window?,The Northern Lights,3,0.28,,0,3,0,1,,,0,3,0
+11,99079,3,Implausible,1.09,New York,2,17,4b,Unpredictable,28U,28,Who did you see when you visited London?,Theresa May,2,0.38,,0,2,0,1,,,0,2,0
+15,99079,4,Implausible,2.91,Twice a day,3,30,4b,Unpredictable,3U,3,What is your brother's nickname?,Big Ben,2,0.11,Cassidy,0,3,0,1,,,0,2,0
+20,99079,5,Implausible,1.27,Black and white,2,8,4b,Unpredictable,5U,25,Where did you go on your boat ride yesterday?,Buckingham Palace,2,0.33,Black and white,2,0,1,1,,,0,2,0
+20,99079,6,Implausible,1.27,Donald Trump,2,8,4b,Unpredictable,25U,25,Where did you go on your boat ride yesterday?,The Thames,2,0.33,,0,2,0,2,,,0,2,0
+13,99079,7,Implausible,1.46,Harry Potter,2,10,4b,Unpredictable,16U,16,When would you next like to go for drinks?,New Years Eve,3,0.57,Harry Potter,2,0,1,2,,,0,3,0
+2,99079,8,Implausible,1.55,It hit an iceberg,4,12,4b,Unpredictable,14U,14,Where are you getting a train from?,Kings Cross,2,0.32,,0,4,0,2,,,0,2,0
+29,99079,9,Implausible,1.36,The North Pole,3,23,4b,Unpredictable,2U,2,Who is your favourite sportsman?,Andy Murray,2,0.19,,0,3,0,2,,,0,2,0
+22,99079,10,Implausible,1.82,Molly and Arthur,3,15,4b,Unpredictable,27U,27,Where would you like to go when you visit America?,The White House,3,0.41,,0,3,0,2,,,0,3,0
+18,99079,11,Implausible,1.09,Robin hood,2,31,4b,Unpredictable,18U,18,When do you next have a day off work?,October thirty first,3,0.58,,0,2,0,3,,,0,3,0
+23,99079,12,Implausible,1.27,James bond,2,13,4b,Unpredictable,20U,20,Where would you like to go today?,Ten Downing Street,3,0.3,James Bond,2,0,1,3,,,0,3,0
+17,99079,13,Implausible,1,A knife and fork,4,1,4b,Unpredictable,7U,7,When is your birthday?,December twenty fifth,3,0.5,,0,4,0,3,,,0,3,0
+10,99079,14,Implausible,1.91,Snow White,2,19,4b,Unpredictable,21U,21,Where did you go swimming yesterday?,The Amazon river,3,0.34,,0,2,0,3,,,0,3,0
+18,74472,1,Implausible,1.36,Robin hood,2,31,2b,Predictable,18P,18,When do you celebrate Halloween?,October thirty first,3,0.89,Christmas,0,2,0,1,,,0,3,0
+6,74472,2,Implausible,1.73,Ham and pineapple,3,9,2b,Predictable,24P,24,What is Aurora Borealis commonly known as?,The Northern Lights,3,0.85,Galaxy,0,3,0,1,,,0,3,0
+17,74472,3,Implausible,1.09,A knife and fork,4,1,2b,Predictable,7P,7,When do you celebrate Christmas?,December twenty fifth,3,0.9,A way in flat,1,3,0.25,1,,,0,3,0
+15,74472,4,Implausible,1.27,Twice a day,3,30,2b,Predictable,3P,3,Which famous clock is in London?,Big Ben,2,1,Chris,0,3,0,1,,,0,2,0
+20,74472,5,Implausible,1.09,Donald Trump,2,8,2b,Predictable,25P,25,Which river runs through London?,The Thames,2,0.69,Donna,0,2,0,1,,,0,2,0
+9,74472,6,Implausible,1.36,Hillary Clinton,2,11,2b,Predictable,26P,26,What is London's underground railway also known as?,The Tube,2,0.71,The aurora,0,2,0,2,,,1,1,0.5
+29,74472,7,Implausible,1,The North Pole,3,23,2b,Predictable,2P,2,Who is the best Scottish tennis player?,Andy Murray,2,0.89,Banana,0,3,0,2,,,0,2,0
+10,74472,8,Implausible,1.91,Snow White,2,19,2b,Predictable,21P,21,What is the longest river in the world?,The Amazon river,3,0.63,Small mind,0,2,0,2,,,0,3,0
+20,74472,9,Implausible,1.09,Black and white,2,8,2b,Predictable,5P,25,Which river runs through London?,Buckingham Palace,2,0.69,Buckingham palace,0,2,0,2,,,2,0,1
+22,74472,10,Implausible,1.09,Molly and Arthur,3,15,2b,Predictable,27P,27,Where does the president of America live?,The White House,3,0.84,Money and,1,2,0.333333333,2,,,0,3,0
+9,74472,11,Implausible,1.36,The Eiffel Tower,2,11,2b,Predictable,6P,26,What is London's underground railway also known as?,Buzz Lightyear,2,0.71,The eiffel tower,2,0,1,3,,,0,2,0
+2,74472,12,Implausible,1.09,It hit an iceberg,4,12,2b,Predictable,14P,14,At which train station will you find platform nine and three quarters?,Kings Cross,2,0.74,Unintelligble,0,4,0,3,,,0,2,0
+23,74472,13,Implausible,1.27,James bond,2,13,2b,Predictable,20P,20,Where does the prime minister live?,Ten Downing Street,3,0.8,James bond,2,0,1,3,,,0,3,0
+13,74472,14,Implausible,1.36,Harry Potter,2,10,2b,Predictable,16P,16,What is the thirty first of December?,New Years Eve,3,0.8,Harry potter,2,0,1,3,,,0,3,0
+12,41699,1,Implausible,1,The White House,3,27,2a,Predictable,10P,10,Which young wizard defeated Lord Voldemort?,Harry Potter,2,0.98,Harry Potter,0,3,0,1,,,2,0,1
+16,41699,2,Implausible,1.36,Kings Cross,2,14,2a,Predictable,13P,13,Which character starred in the famous 007 films?,James Bond,2,0.95,George Cross,1,1,0.5,1,,,0,2,0
+5,41699,3,Implausible,1.64,The Tube,2,26,2a,Predictable,15P,15,What are the names of Ron Weasley's Mum and Dad?,Molly and Arthur,3,0.67,Percy ,0,2,0,1,,,0,3,0
+7,41699,4,Implausible,1.09,Tom Hanks,2,29,2a,Predictable,4P,4,What colours are pandas?,Black and white,3,0.98,White,0,2,0,1,,,1,2,0.333333333
+21,41699,5,Implausible,1.27,New Years Eve,3,16,2a,Predictable,23P,23,Where does Father Christmas live?,The Northe Pole,3,0.81,North Pole,0,3,0,1,,,2,1,0.666666667
+27,41699,6,Implausible,1.18,The Thames,2,25,2a,Predictable,19P,19,Which fictional character lived with seven dwarves?,Snow White,2,1,Snow White,0,2,0,2,,,2,0,1
+4,41699,7,Implausible,1.18,Big Ben,2,3,2a,Predictable,30P,30,How often does the dentist tell you to brush your teeth?,Twice a day,3,0.82,Twice a day,0,2,0,2,,,3,0,1
+25,41699,8,Implausible,1.55,Buzz Lightyear,2,6,2a,Predictable,17P,17,Which city is the statue of Liberty in?,New York,2,0.97,Manhattan,0,2,0,2,,,0,2,0
+8,41699,9,Implausible,1.09,Theresa May,2,28,2a,Predictable,1P,1,Which cutlery should I use to cut my food?,A knife and fork,4,0.82,Knife and form,0,2,0,2,,,2,2,0.5
+14,41699,10,Implausible,1.82,Ten Downing Street,3,20,2a,Predictable,31P,31,Who leads a gang of outlaws in Sherwood Forest?,Robin Hood,2,1,The wizard ,0,3,0,2,,,0,2,0
+1,41699,11,Implausible,1.09,December 25th,3,7,2a,Predictable,9P,9,"As well as cheese and tomato, which two toppings are usually on a Hawaiian pizza?",Ham and Pineapple,3,0.89,Pepperoni ,0,3,0,3,,,0,3,0
+19,41699,12,Implausible,1.09,October thirty first,3,18,2a,Predictable,22P,22,Which tall building is in Paris?,The Eiffel Tower,3,0.82,Eiffel Tower,0,3,0,3,,,2,1,0.666666667
+28,41699,13,Implausible,1.73,The Amazon River,3,21,2a,Predictable,8P,8,Who is the newly elected president of America?,Donald Trump,2,0.94,Donald Trump,0,3,0,3,,,2,0,1
+3,41699,14,Implausible,1.36,Andy Murray,2,2,2a,Predictable,12P,12,How did The Titanic sink?,It hit an iceberg,4,0.72,Iceberg,0,2,0,3,,,1,3,0.25
+8,21030,1,Plausible,6.46,A knife and fork,4,1,1a,Predictable,1P,1,Which cutlery should I use to cut my food?,A knife and fork,4,0.82,A knife and fork.,4,0,1,1,,,4,0,1
+21,21030,2,Plausible,5.27,The North Pole,3,23,1a,Predictable,23P,23,Where does Father Christmas live?,The Northe Pole,3,0.81,The North Pole.,3,0,1,1,,,3,0,1
+4,21030,3,Plausible,6.27,Twice a day,3,30,1a,Predictable,30P,30,How often does the dentist tell you to brush your teeth?,Twice a day,3,0.82,Twice a day.,3,0,1,1,,,3,0,1
+7,21030,4,Plausible,6.91,Black and white,3,4,1a,Predictable,4P,4,What colours are pandas?,Black and white,3,0.98,black and white,3,0,1,1,,,3,0,1
+28,21030,5,Plausible,6.91,Donald Trump,2,8,1a,Predictable,8P,8,Who is the newly elected president of America?,Donald Trump,2,0.94,Donald Trump,2,0,1,1,,,2,0,1
+3,21030,6,Plausible,6.64,It hit an iceberg,4,12,1a,Predictable,12P,12,How did The Titanic sink?,It hit an iceberg,4,0.72,It hit an iceberg.,4,0,1,2,,,4,0,1
+1,21030,7,Plausible,6.91,Ham and pineapple,3,9,1a,Predictable,9P,9,"As well as cheese and tomato, which two toppings are usually on a Hawaiian pizza?",Ham and Pineapple,3,0.89,ham and pineapple,3,0,1,2,,,3,0,1
+27,21030,8,Plausible,6.91,Snow White,2,19,1a,Predictable,19P,19,Which fictional character lived with seven dwarves?,Snow White,2,1,Snow White,2,0,1,2,,,2,0,1
+5,21030,9,Plausible,6.27,Molly and Arthur,3,15,1a,Predictable,15P,15,What are the names of Ron Weasley's mum and dad?,Molly and Arthur,3,0.67,Molly and Arthur,3,0,1,2,,,3,0,1
+25,21030,10,Plausible,7,New York,2,17,1a,Predictable,17P,17,Which city is the statue of liberty in?,New York,2,0.97,New York,2,0,1,2,,,2,0,1
+16,21030,11,Plausible,7,James bond,2,13,1a,Predictable,13P,13,Which character starred in the famous 007 films?,James Bond,2,0.95,James Bond,2,0,1,3,,,2,0,1
+14,21030,12,Plausible,5.82,Robin hood,2,31,1a,Predictable,31P,31,Who leads a gang of outlaws in Sherwood Forest?,Robin Hood,2,1,Robin Hood,2,0,1,3,,,2,0,1
+19,21030,13,Plausible,6.27,The Eiffel Tower,3,22,1a,Predictable,22P,22,Which tall building is in Paris?,The Eiffel Tower,3,0.82,The Eiffel Tower,3,0,1,3,,,3,0,1
+12,21030,14,Plausible,6.82,Harry Potter,2,10,1a,Predictable,10P,10,Which young wizard defeated Lord Voldemort?,Harry Potter,2,0.98,Harry Potter,2,0,1,3,,,2,0,1
+20,50927,1,Plausible,6.91,Buckingham Palace,2,25,1b,Predictable,5P,25,Which river runs through London?,Buckingham Palace,2,0.69,Buckingham palace,2,0,1,1,,,2,0,1
+22,50927,2,Plausible,6.73,The White House,3,27,1b,Predictable,27P,27,Where does the president of America live?,The White House,3,0.84,The White house ,3,0,1,1,,,3,0,1
+2,50927,3,Plausible,5.91,Kings Cross,2,14,1b,Predictable,14P,14,At which train station will you find platform nine and three quarters?,Kings Cross,2,0.74,Kingscross,2,0,1,1,,,2,0,1
+9,50927,4,Plausible,6.91,Buzz Lightyear,2,26,1b,Predictable,6P,26,What is London's underground railway also known as?,Buzz Lightyear,2,0.71,Buzz Lightyear ,2,0,1,1,,,2,0,1
+13,50927,5,Plausible,7,New Years Eve,3,16,1b,Predictable,16P,16,What is the thirty first of December?,New Years Eve,3,0.8,New years eve ,3,0,1,1,,,3,0,1
+10,50927,6,Plausible,5.64,The Amazon River,3,21,1b,Predictable,21P,21,What is the longest river in the world?,The Amazon river,3,0.63,Amazon River ,2,1,0.666666667,2,,,2,1,0.666666667
+17,50927,7,Plausible,6.55,December 25th,3,7,1b,Predictable,7P,7,When do you celebrate Christmas?,December twenty fifth,3,0.9,December 25th ,3,0,1,2,,,3,0,1
+18,50927,8,Plausible,7,October thirty first,3,18,1b,Predictable,18P,18,When do you celebrate Halloween?,October thirty first,3,0.89,October 31st,3,0,1,2,,,3,0,1
+20,50927,9,Plausible,6.91,The Thames,2,25,1b,Predictable,25P,25,Which river runs through London?,The Thames,2,0.69,The Thanes,2,0,1,2,,,2,0,1
+29,50927,10,Plausible,6.55,Andy Murray,2,2,1b,Predictable,2P,2,Who is the best Scottish tennis player?,Andy Murray,2,0.89,Andy Murray ,2,0,1,2,,,2,0,1
+15,50927,11,Plausible,6.64,Big Ben,2,3,1b,Predictable,3P,3,Which famous clock is in London?,Big Ben,2,1,BIG BEN,2,0,1,3,,,2,0,1
+23,50927,12,Plausible,6.82,Ten Downing Street,3,20,1b,Predictable,20P,20,Where does the prime minister live?,Ten Downing Street,3,0.8,10 downing st,3,0,1,3,,,3,0,1
+6,50927,13,Plausible,5.64,The Northern Lights,3,24,1b,Predictable,24P,24,What is Aurora Borealis commonly known as?,The Northern Lights,3,0.85,The northern lights ,3,0,1,3,,,3,0,1
+9,50927,14,Plausible,6.91,The Tube,2,26,1b,Predictable,26P,26,What is London's underground railway also known as?,The Tube,2,0.71,The tube,2,0,1,3,,,2,0,1
+5,96632,1,Plausible,7,Molly and Arthur,3,15,3a,Unpredictable,15U,15,What are your parents called?,Molly and Arthur,3,0.21,Anna ,0,3,0,1,,,0,3,0
+3,96632,2,Plausible,6.09,It hit an iceberg,4,12,3a,Unpredictable,12U,12,What happened to your boat?,It hit an iceberg,4,0.58,it hit an iceburg,4,0,1,1,,,4,0,1
+1,96632,3,Plausible,4.91,Ham and pineapple,3,9,3a,Unpredictable,9U,9,What would you like for dinner?,Ham and Pineapple,3,0.31,apple pie,0,3,0,1,,,0,3,0
+4,96632,4,Plausible,6.64,Twice a day,3,30,3a,Unpredictable,30U,30,How often do you go outside for a walk?,Twice a day,3,0.54,twice a day,3,0,1,1,,,3,0,1
+19,96632,5,Plausible,5.1,The Eiffel Tower,3,22,3a,Unpredictable,22U,22,Where are you going at Christmas?,The Eiffel Tower,3,0.51,the Eiffel Tower,3,0,1,1,,,3,0,1
+28,96632,6,Plausible,6.91,Donald Trump,2,8,3a,Unpredictable,8U,8,Who did you see interviewed on television recently?,Donald Trump,2,0.21,Donald Trump,2,0,1,2,,,2,0,1
+8,96632,7,Plausible,6.27,A knife and fork,4,1,3a,Unpredictable,1U,1,What did you buy from the shop?,A knife and fork,4,0.32,a knife and fork,4,0,1,2,,,4,0,1
+16,96632,8,Plausible,5.18,James bond,2,13,3a,Unpredictable,13U,13,What is your favourite film?,James Bond,2,0.22,James Bond,2,0,1,2,,,2,0,1
+25,96632,9,Plausible,6.09,New York,2,17,3a,Unpredictable,17U,17,Where would you like to go shopping?,New York,2,0.24,New York,2,0,1,2,,,2,0,1
+7,96632,10,Plausible,6.55,Black and white,3,4,3a,Unpredictable,4U,4,What colours should I paint the wall?,Black and white,3,0.41,Black and White,3,0,1,2,,,3,0,1
+12,96632,11,Plausible,6.27,Harry Potter,2,10,3a,Unpredictable,10U,10,What is the name of your favourite book?,Harry Potter,2,0.35,Harry Potter,2,0,1,3,,,2,0,1
+21,96632,12,Plausible,5.82,The North Pole,3,23,3a,Unpredictable,23U,23,Where would you like to go on holiday?,The Northe Pole,3,0.15,the North Pole,3,0,1,3,,,3,0,1
+14,96632,13,Plausible,4.91,Robin hood,2,31,3a,Unpredictable,31U,31,What is your best friend called?,Robin Hood,2,0.12,robin Hood,2,0,1,3,,,2,0,1
+27,96632,14,Plausible,6.55,Snow White,2,19,3a,Unpredictable,19U,19,Who is your favourite fictional character?,Snow White,2,0.11,Snow White,2,0,1,3,,,2,0,1
+14,62594,1,Implausible,1.64,Ten Downing Street,3,20,4a,Unpredictable,31U,31,What is your best friend called?,Robin Hood,2,0.12,Nothing I only heard a banging noise,0,3,0,1,,,0,2,0
+25,62594,2,Implausible,1.27,Buzz Lightyear,2,6,4a,Unpredictable,17U,17,Where would you like to go shopping?,New York,2,0.24,Nothing I only heard a muffled noise,0,2,0,1,,,0,2,0
+1,62594,3,Implausible,1.64,December 25th,3,7,4a,Unpredictable,9U,9,What would you like for dinner?,Ham and Pineapple,3,0.31,I dont know it was too muffled,0,3,0,1,,,0,3,0
+16,62594,4,Implausible,3.36,Kings Cross,2,14,4a,Unpredictable,13U,13,What is your favourite film?,James Bond,2,0.22,Sounded like Kings Cross,2,0,1,1,,,0,2,0
+3,62594,5,Implausible,2.09,Andy Murray,2,2,4a,Unpredictable,12U,12,What happened to your boat?,It hit an iceberg,4,0.58,Sounded like I don't knoow,0,2,0,1,,,0,4,0
+5,62594,6,Implausible,1.55,The Tube,2,26,4a,Unpredictable,15U,15,What are your parents called?,Molly and Arthur,3,0.21,I dont know it was too muffled,0,2,0,2,,,0,3,0
+4,62594,7,Implausible,1.36,Big Ben,2,3,4a,Unpredictable,30U,30,How often do you go outside for a walk?,Twice a day,3,0.54,It sounded like never,0,2,0,2,,,0,3,0
+19,62594,8,Implausible,1.09,October thirty first,3,18,4a,Unpredictable,22U,22,Where are you going at Christmas?,The Eiffel Tower,3,0.51,I could nt make it out as it was too muffled,0,3,0,2,,,0,3,0
+26,62594,9,Implausible,2.18,The Northern Lights,3,24,4a,Unpredictable,11U,11,Who did you see when you visited America?,Hillary Clinton,2,0.37,I could not make it out as it was too muffled,0,3,0,2,,,0,2,0
+7,62594,10,Implausible,1.27,Tom Hanks,2,29,4a,Unpredictable,4U,4,What colours should I paint the wall?,Black and white,3,0.41,I dont know could not make out what was said,0,2,0,2,,,0,3,0
+27,62594,11,Implausible,1.27,The Thames,2,25,4a,Unpredictable,19U,19,Who is your favourite fictional character?,Snow White,2,0.11,I cant make out what was said,0,2,0,3,,,0,2,0
+21,62594,12,Implausible,1.64,New Years Eve,3,16,4a,Unpredictable,23U,23,Where would you like to go on holiday?,The Northe Pole,3,0.15,Too muffled to make out the words,0,3,0,3,,,0,3,0
+28,62594,13,Implausible,1.09,The Amazon River,3,21,4a,Unpredictable,8U,8,Who did you see interviewed on television recently?,Donald Trump,2,0.21,,0,3,0,3,,,0,2,0
+12,62594,14,Implausible,4.91,The White House,3,27,4a,Unpredictable,10U,10,What is the name of your favourite book?,Harry Potter,2,0.35,The light house,2,1,0.666666667,3,,,0,2,0
+29,91544,1,Plausible,6.82,Andy Murray,2,2,3b,Unpredictable,2U,2,Who is your favourite sportsman?,Andy Murray,2,0.19,andy murray,2,0,1,1,,,2,0,1
+6,91544,2,Plausible,5.27,The Northern Lights,3,24,3b,Unpredictable,24U,24,What can you see out of your window?,The Northern Lights,3,0.28,the northern lights,3,0,1,1,,,3,0,1
+2,91544,3,Plausible,6.36,Kings Cross,2,14,3b,Unpredictable,14U,14,Where are you getting a train from?,Kings Cross,2,0.32,kings cross,2,0,1,1,,,2,0,1
+9,91544,4,Plausible,6.91,Buzz Lightyear,2,26,3b,Unpredictable,6U,26,What is your least favourite method of transport?,Buzz Lightyear,2,0.39,buzz lightyear,2,0,1,1,,,2,0,1
+20,91544,5,Plausible,6.73,Buckingham Palace,2,25,3b,Unpredictable,5U,25,Where did you go on your boat ride yesterday?,Buckingham Palace,2,0.33,buckingham palace,2,0,1,1,,,2,0,1
+10,91544,6,Plausible,4.82,The Amazon River,3,21,3b,Unpredictable,21U,21,Where did you go swimming yesterday?,The Amazon river,3,0.34,the amazon river,3,0,1,2,,,3,0,1
+9,91544,7,Plausible,6.91,The Tube,2,26,3b,Unpredictable,26U,26,What is your least favourite method of transport?,The Tube,2,0.39,"the tube
+the tube",2,0,1,2,,,0,2,0
+17,91544,8,Plausible,6.73,December 25th,3,7,3b,Unpredictable,7U,7,When is your birthday?,December twenty fifth,3,0.5,december 25th,3,0,1,2,,,3,0,1
+22,91544,9,Plausible,6.82,The White House,3,27,3b,Unpredictable,27U,27,Where would you like to go when you visit America?,The White House,3,0.41,the white house,3,0,1,2,,,3,0,1
+15,91544,10,Plausible,5.46,Big Ben,2,3,3b,Unpredictable,3U,3,What is your brother's nickname?,Big Ben,2,0.11,big ben,2,0,1,2,,,2,0,1
+13,91544,11,Plausible,5.82,New Years Eve,3,16,3b,Unpredictable,16U,16,When would you like to go for drinks?,New Years Eve,3,0.57,new years eve,3,0,1,3,,,3,0,1
+23,91544,12,Plausible,5.82,Ten Downing Street,3,20,3b,Unpredictable,20U,20,Where would you like to go today?,Ten Downing Street,3,0.3,10 downing street,3,0,1,3,,,3,0,1
+18,91544,13,Plausible,6.73,October thirty first,3,18,3b,Unpredictable,18U,18,When do you next have a day off work?,October thirty first,3,0.58,october 31st,3,0,1,3,,,3,0,1
+20,91544,14,Plausible,6.73,The Thames,2,25,3b,Unpredictable,25U,25,Where did you go on your boat ride yesterday?,The Thames,2,0.33,the thames,2,0,1,3,,,2,0,1
