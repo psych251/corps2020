@@ -253,7 +253,7 @@ def main():
     print(f"Loaded {len(stimulus_data)} stimulus lists: {list(stimulus_data.keys())}")
     
     # Find all List CSV files
-    input_dir = '/Users/xirohu/ResearchProj/corps2020/data/raw/pilotA'
+    input_dir = '/Users/xirohu/ResearchProj/corps2020/data/raw/pilotB'
     list_files = glob.glob(os.path.join(input_dir, 'List_*.csv'))
     
     print(f"\nFound {len(list_files)} List files:")
@@ -301,6 +301,18 @@ def main():
             if col not in combined_df.columns:
                 combined_df[col] = ''
         
+
+        # Semi-auto code Correct response and NumberOfPlausibleReported
+        resp_norm = combined_df['response'].fillna('').astype(str).str.strip().str.lower()
+        ha_norm = combined_df['Heard Answer'].fillna('').astype(str).str.strip().str.lower()
+        ea_norm = combined_df['Expected Answer'].fillna('').astype(str).str.strip().str.lower()
+        # code Correct
+        match_ha_mask = (resp_norm == ha_norm) & (resp_norm != '')
+        combined_df.loc[match_ha_mask, 'Correct'] = combined_df.loc[match_ha_mask, 'HA Wlength']
+        # code NumberOfPlausibleReported
+        match_ea_mask = (resp_norm == ea_norm) & (resp_norm != '')
+        combined_df.loc[match_ea_mask, 'NumberOfPlausibleWordsReported'] = combined_df.loc[match_ea_mask, 'EA Wlength']
+
         # Reorder columns to match dprime.csv
         combined_df = combined_df[TARGET_COLUMNS]
         
