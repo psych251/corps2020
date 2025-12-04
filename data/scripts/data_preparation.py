@@ -95,14 +95,15 @@ def get_stimulus_info(stimulus_data, list_name, qfile):
     if list_name not in stimulus_data:
         return None
     
-    df = stimulus_data[list_name]
+    df = stimulus_data[list_name].copy()
     
     # Extract QFile number (e.g., "9P" from "9P.wav" or "9P.mp3")
     qfile_clean = qfile.replace('.wav', '').replace('.mp3', '')
     
     # Find matching row by QFile
     # QFile column might have .wav extension
-    matching_rows = df[df['QFile'].str.contains(qfile_clean, na=False, regex=False)]
+    df['QFile_clean'] = df['QFile'].astype(str).str.replace('.wav', '').str.replace('.mp3', '')
+    matching_rows = df[df['QFile_clean']== qfile_clean]
     
     if len(matching_rows) > 0:
         return matching_rows.iloc[0].to_dict()
@@ -253,7 +254,7 @@ def main():
     print(f"Loaded {len(stimulus_data)} stimulus lists: {list(stimulus_data.keys())}")
     
     # Find all List CSV files
-    input_dir = '/Users/xirohu/ResearchProj/corps2020/data/raw/pilotB'
+    input_dir = '/Users/xirohu/ResearchProj/corps2020/data/raw'
     list_files = glob.glob(os.path.join(input_dir, 'List_*.csv'))
     
     print(f"\nFound {len(list_files)} List files:")
