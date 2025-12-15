@@ -32,8 +32,6 @@ I anticipate two main challenges. The first concerns the stimuli. The authors ha
 
 ### Power Analysis
 
-Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
-
 The paper's central research question is whether high-level knowledge enhances comprehension through:
 
 - **Semantic predictions** measured by null interaction between Question Constrain and Answer Consistency.
@@ -55,13 +53,14 @@ Considering how computationally heavy it is to simulate the power by a complex B
 
 ### Planned Sample
 
-Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.
+My planned sample size is 80. I chose to stay with the original sample size due to budget concern. Although it does not meet 80% power, the lowest cohen's f2 I can choose in BayesPower package is 0.01, whereas my calculated Cohen's f2 is 0.0015. This suggested that the actual needed participants to achieve 80% power might be smaller than 104. A follow-up simulation analysis could test this although it exceeds my capacity. 
 
-My planned sample size is 80. I chose to stay with the original sample size due to budget concern. Although it does not meet 80% power, the lowest cohen's f2 I can choose in BayesPower package is 0.01, whereas my calculated Cohen's f2 is 0.0015. This suggested that the actual needed participants to achieve 80% power might be smaller than 104. A follow-up simulation analysis could test this although it exceeds my capacity.
+Participants were recruited from Prolific with the following criteria:
+- Residence: United Kingdom
+- Nationality: United Kingdom
+- First Language: English
 
 ### Materials
-
-All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
 
 To ensure my replication closely align with the original study, I reached out to the first author for material and scripts. The author kindly shared all the stimuli. Since some questions asked about political leaders at that time and the answer no longer holds for now, I deleted those items, leaving 14 items per list whereas in the original stimuli there are 15 items per list. The items that I deleted are:
 
@@ -101,9 +100,9 @@ Following Corps and Rabagliati (2020), I will conduct a signal detection analysi
 - words reported in the wrong order will not be scored as matching
 - exclude trials where participants typed question rather than the answer
 
-After that, I will perform the exact mixed-effects logistic regression model as the original authors did.
+After that, I will perform the exact mixed-effects logistic regression model as the original authors did. The scripts can be found in the [github repository](https://github.com/psych251/corps2020/tree/main/data/scripts)
 
-**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do. The model structure is as follows:
+**key analysis of interest **  The model structure is as follows:
 ```{r}
 cbind(ReportedExpectedWords, UnreportedExpectedWords) ~ 
   Question_Constraint * Answer_Consistency * Block + 
@@ -112,47 +111,131 @@ cbind(ReportedExpectedWords, UnreportedExpectedWords) ~
 ```
 
 ### Differences from Original Study
+As noted in previous sections, the differences are:
+- As noted in the materials section, items referencing outdated political figures were removed, resulting in 14 items per list instead of the original 15.
+- Data was successfully recorded using AJAX calls, distinct from the MySQL method in the original paper, but the resulting data structure was transformed to match the original format for analysis.
 
-Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.
-
+This project was registered before data collection at [the link](https://osf.io/2dtjf/overview)
+ 
 ### Methods Addendum (Post Data Collection)
 
-You can comment this section out prior to final report with data collection.
-
 #### Actual Sample
-  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
+The final dataset consists of 77 participants recruited via Prolific Academic(three were excluded due to typed questions instead of answers). There are 41 females and the median age is 45.
 
 #### Differences from pre-data collection methods plan
-  Any differences from what was described as the original plan, or “none”.
+To better understand participant behavior, I conducted an **exploratory analysis** on the type of errors made in the "implausible" conditions after collecting data. Given the difficulty of the task (noise-vocoded speech with semantically inconsistent answers), we might expect a high rate of "giving up". This analysis was inspired by reviewing the raw responses. Below is the code.
+```{r}
+library(tidyverse)
+library(knitr)
+library(lme4)
+library(doBy)
+library(broom.mixed)
+# read data
+data_path = 'https://raw.githubusercontent.com/psych251/corps2020/main/data/processed/transformed_dprime.csv'
+data = read_csv(data_path)
+
+# calculate proportion of "don't know" responses
+dont_know_keywords <- c("don't know", "dont know", "unsure", "muffled", "no idea", "unclear")
+data$IsDontKnow <- grepl(paste(dont_know_keywords, collapse="|"), tolower(data$response))
+
+# Summarize  rates by condition
+dont_know_summary <- summaryBy(IsDontKnow ~ ACondition + QCondition, data=data, FUN=c(mean))
+kable(dont_know_summary, caption = "Proportion of 'Don't Know' Responses by Condition")
+
+# Fit a model to see how different factors influencce the don't know rate
+model_interaction <- glm(IsDontKnow ~ ACondition * QCondition, 
+                        data = data, 
+                        family = binomial)
+model_summary <- tidy(model_interaction) %>%
+  mutate(
+    OR = exp(estimate),  # Odds ratios
+    `95% CI` = paste0("[", round(exp(estimate - 1.96*std.error), 2), 
+                      ", ", round(exp(estimate + 1.96*std.error), 2), "]"),
+    across(c(estimate, std.error, statistic, p.value), ~round(., 3))
+  ) %>%
+  select(term, estimate, std.error, statistic, p.value, OR, `95% CI`)
+
+kable(model_summary,
+      caption = "Logistic Regression: 'Don't Know' Responses ~ Answer Consistency × Question Constraint",
+      col.names = c("Predictor", "β", "SE", "z", "p", "OR", "95% CI"),
+      digits = 3)
+
+```
 
 
 ## Results
 
 
 ### Data preparation
-
-Data preparation following the analysis plan.
-	
-```{r include=F}
-### Data Preparation
-
-#### Load Relevant Libraries and Functions
-
-#### Import data
-
-#### Data exclusion / filtering
-
-#### Prepare data for analysis - create columns etc.
-```
+I have converted the stored data into the structure that aligns with the data structure in the original paper (see https://osf.io/kwa32) using [python script](https://github.com/psych251/corps2020/blob/main/data/scripts/data_preparation.py). The converted file can be found [here](https://github.com/psych251/corps2020/blob/main/data/processed/transformed_dprime.csv). The processed data file includes trial-level information on question constraint, answer consistency, and the proportion of expected words reported. 
 
 ### Confirmatory analysis
-I have converted the stored data into the structure that aligns with the data structure in the original paper (see https://osf.io/kwa32) using [python script](https://github.com/psych251/corps2020/blob/main/data/scripts/data_preparation.py). The converted file can be found [here](https://github.com/psych251/corps2020/blob/main/data/processed/transformed_dprime.csv). 
+To replicate the findings of Corps and Rabagliati (2020), I fitted a generalized linear mixed-effects model specifying a binomial family. The model predicted the proportion of expected words reported based on the fixed effects of Question Constraint, Answer Consistency, Block and their interactions. The scripts for figure and mixed-effect model can be found in the [scripts folder](https://github.com/psych251/corps2020/tree/main/data/scripts) 
 
-Once finishing manually coding, I will use the [same script](https://osf.io/5cqy9) provided by the author for mixed-effects regression model. 
-The analyses as specified in the analysis plan.  
+Table 1 summarizes the fixed effects from the model. 
+```{r}
+#| label: tbl-glmer-results
+#| tbl-cap: "Full model output for fixed effects for the analysis of word report scores in Experiment 1."
+#| echo: false
+#| warning: false
+#| message: false
 
-*Side-by-side graph with original graph is ideal here*
+library(knitr)
+library(kableExtra)
+results_table <- data.frame(
+  Predictor = c("Intercept", 
+                "Question Constraint", 
+                "Answer Consistency", 
+                "Block", 
+                "Question Constraint * Answer Consistency", 
+                "Question Constraint * Block", 
+                "Answer Consistency * Block", 
+                "Question Constraint * Answer Consistency * Block"),
+  `Estimate (SE)` = c("−0.71 (0.40)", 
+                      "1.87 (0.37)", 
+                      "5.19 (0.53)", 
+                      "0.41 (0.24)", 
+                      "−0.02 (0.37)", 
+                      "−0.10 (0.23)", 
+                      "0.85 (0.25)", 
+                      "0.10 (0.25)"),
+  z = c("−1.80", "5.02", "9.87", "1.74", "−0.05", "−0.43", "3.40", "0.41"),
+  `p value` = c(".071", "< .001", "< .001", ".082", ".961", ".668", "< .001", ".685"),
+  `Bayes factor` = c("−", "> 100", "> 100", "0.30", "0.04", "0.07", "13.17", "0.35"),
+  check.names = FALSE
+)
 
+# Render the table
+kable(results_table, 
+      align = c("l", "c", "c", "c", "c"), 
+      booktabs = TRUE,
+      format = "html") %>%
+  kable_classic(bootstrap_options = "none",
+                full_width = FALSE,
+                font_size = 12,
+                position = "left") %>%
+  add_header_above(c(" " = 1, "Words Reported in Expected Answer" = 4))
+```
+The original table can be found below.
+![Original Table](https://raw.githubusercontent.com/psych251/corps2020/main/writeup/original_paper.png)
+Figure 1 displays the average proportion of words reported correctly and words reported with expectation across conditions. Figure 2 is the figure from the Corps and Rabagliati (2020).
+
+:::{#fig-means layout-ncol=2}
+![](https://raw.githubusercontent.com/psych251/corps2020/main/data/out/accmeans.png)
+
+![](https://raw.githubusercontent.com/psych251/corps2020/main/data/out/expmeans.png)
+
+Observed means of the proportion of words in the heard answer (left panel) and the expected answer (right panel) reported correctly across conditions. Error bars represent +/- 1 standard error from the mean
+:::
+
+
+:::{#fig-ori layout-ncol=1}
+![](https://raw.githubusercontent.com/psych251/corps2020/main/writeup/original_figure.png)
+
+Figures in Original Paper
+:::
+
+The descriptive figures and model output reveal a strong main effect of Answer Consistency. Participants were significantly more accurate at reporting expected words when the answer was semantically consistent compared to when it was inconsistent. The interaction between Question Constraint and Answer Consistency - the key statistic for distinguishing "form" versus "semantic" predictions - did not reach significance (beta = -0.02,SE=0.37, p=0.961, BF=0.04). This mirrors the findings of Corps and Rabagliati (2020) (beta = -0.18, SE=0.30, p=0.55, BF=0.19), supporting the hypothesis that prediction facilitates perception of distorted speech via semantic content rather than specific word-form anticipation.
 ### Exploratory analyses
 
 Any follow-up analyses desired (not required).  
@@ -160,9 +243,11 @@ Any follow-up analyses desired (not required).
 ## Discussion
 
 ### Summary of Replication Attempt
-
-Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+This project successfully replicated the primary result of Corps & Rabagliati (2020). The confirmatory analysis demonstrated a robust main effect of Answer Consistency: participants were significantly better at identifying noise-vocoded words when the answer was semantically plausible given the question. Crucially, as in the original study, this benefit did not interact strongly with Question Constraint. This supports the theoretical claim that top-down predictions during speech comprehension operate largely at the semantic level, allowing listeners to leverage consistency to resolve perceptual ambiguity, regardless of how strongly the question constrains specific word forms.
 
 ### Commentary
+The successful replication of this effect, despite modifications to the stimulus list (removal of items referencing outdated political figures), demonstrates the robustness of the underlying phenomenon. The main effect of Answer Consistency and null effect of its interaction with Question Constraint are substantial and evident in both the statistical model and descriptive visualizations.  
 
-Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
+The exploratory analysis provided further insight into the nature of the "Implausible" condition. The high rate of "don't know" responses suggests that without semantic support, the bottom-up acoustic signal (noise-vocoded speech) is often insufficient for any successful lexical retrieval. This reinforces the "all-or-nothing" nature of perception in highly degraded conditions: semantic prediction doesn't just refine perception; it often enables it entirely.
+
+From a data science perspective, the replication was largely facilitated by the original authors' transparent code sharing. However, the reliance on specific cultural knowledge (names of prime ministers) required a limited population to prevent cultural and historical artifacts from confounding the "Plausibility" metric. For example, the prime minister in 2019 was no longer the prime minister in 2025.Future studies on semantic prediction should consider using more timeless and cross-cultural facts. 
