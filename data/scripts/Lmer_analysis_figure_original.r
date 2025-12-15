@@ -1,6 +1,6 @@
 # This is the adapted version of JML_Experiment_1_Script.Rmd from the OSF file by Corps 2020 (https://osf.io/5cqy9)
 library(here)
-data_file <- here('processed', 'transformed_dprime_pilotB.csv')
+data_file <- here('processed', 'transformed_dprime.csv')
 data <- read.csv(data_file)
 data$Participant <- as.factor(data$Participant)
 data$ItemNo <- as.factor(data$ItemNo)
@@ -47,7 +47,7 @@ accmeans <- ggplot(sum, aes(x=BlockF, y=Prop.Heard.mean, group=ACondition, linet
     # Facet Headers (The boxes at the top)
     strip.text = element_text(size = 14)
   )
- plot_file = here("out", "accmeans_pilotB.png")
+ plot_file = here("out", "accmeans.png")
  ggsave(plot_file, accmeans, width=8, height=6)
 
 ##============Signal Detection Noise Analysis========================
@@ -77,7 +77,7 @@ expmeans <- ggplot(sumd, aes(x=BlockF, y=Prop.Expected.mean, group=ACondition, l
     # Facet Headers (The boxes at the top)
     strip.text = element_text(size = 14)
   )
-plot_file = here("out", "expmeans_pilotB.png")
+plot_file = here("out", "expmeans.png")
 ggsave(plot_file, expmeans, width=8, height=6)
 
 # run model analysis
