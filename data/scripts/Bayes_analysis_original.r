@@ -7,7 +7,7 @@ rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
 my_prior = set_prior('student_t(10,0,1)', class="b")
-data_file <- here('processed', 'transformed_dprime_pilotB.csv')
+data_file <- here('processed', 'transformed_dprime.csv')
 d <- read.csv(data_file)
 
 d$Participant <- as.factor(d$Participant)
